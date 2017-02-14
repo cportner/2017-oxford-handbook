@@ -2,10 +2,10 @@
 # For Fertility Issues chapter in Oxford handbook
 # Claus C Portner
 # Begun.: 2017-02-10
-# Edited: 2017-02-10
+# Edited: 2017-02-13
 
 library(tidyr)
-library(reshape2)
+library(ggplot2)
 
 # short file paths - assuming work directory is "code"
 dataDir <- "../data/Data_Extract_From_World_Development_Indicators"
@@ -35,12 +35,17 @@ df$SP.ADO.TFRT <- as.numeric(df$SP.ADO.TFRT)
 df$SP.DYN.TFRT.IN <- as.numeric(df$SP.DYN.TFRT.IN)
 df$SP.DYN.WFRT <- as.numeric(df$SP.DYN.WFRT)
 
-# Doh - using ts does not work because this data has years as variables
-tsdata <- ts(df,start=c(1967,1),frequency=1)
+# Graph for TFR
+# This is a pretty good start, but need legends fixed
+ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, group  = Country.Code, color = Country.Code)) + 
+  geom_line(size=1.5) + # Thicker line
+  expand_limits(y = 0) + # include 0 in TFR axis
+  xlab("Year") + ylab("Total Fertility Rate") + # Pretty labels
+  ggtitle("Changes in Total Fertility Rate by Region - 1967-2015") +
+  scale_colour_hue(name = "Region") + # Set legen title
+  theme_bw() +
+  theme(legend.position = c(.2, .2))
 
-# Time series graph 1967-2015 (no data avaiable yet for 2016)
-ts.plot(tsdata[,'totrev'],ylab="Total Revenue",xlab="Year")
-ts.plot(tsdata[,'revpassmiles'],ylab="Revenue Passenger Miles",xlab="Year")
 
 
 
