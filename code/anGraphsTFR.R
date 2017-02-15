@@ -6,6 +6,7 @@
 
 library(tidyr)
 library(ggplot2)
+library(directlabels)
 
 # short file paths - assuming work directory is "code"
 dataDir <- "../data/Data_Extract_From_World_Development_Indicators"
@@ -37,16 +38,26 @@ df$SP.DYN.WFRT <- as.numeric(df$SP.DYN.WFRT)
 
 # Graph for TFR
 # This is a pretty good start, but need legends fixed
-ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, group  = Country.Code, color = Country.Code)) + 
+p <- ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, group  = Country.Code, color = Country.Code)) + 
   geom_line(size=1.5) + # Thicker line
-  expand_limits(y = 0) + # include 0 in TFR axis
+  scale_y_continuous(expand = c(0, 0), limits = c(0,8)) + # better way of 0 in TFR
   xlab("Year") + ylab("Total Fertility Rate") + # Pretty labels
   ggtitle("Changes in Total Fertility Rate by Region - 1967-2015") +
-  scale_colour_hue(name = "Region") + # Set legen title
+  scale_colour_hue(name = "Region") + # Set legend title
   theme_bw() +
   theme(legend.position = c(.2, .2))
 
 
+# Labels at end of lines, problem is very difficult to see
+p1 <- ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, group  = Country.Code, color = Country.Code)) + 
+  geom_line(size=1.5) + # Thicker line
+  scale_y_continuous(expand = c(0, 0), limits = c(0,8)) + # better way of 0 in TFR
+  xlab("Year") + ylab("Total Fertility Rate") + # Pretty labels
+  ggtitle("Changes in Total Fertility Rate by Region - 1967-2015")
 
+p1 <- p1 + geom_dl(aes(label = Country.Code), 
+                   method = "last.points", cex = 0.8)
+  
+p1
 
 
