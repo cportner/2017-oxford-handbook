@@ -2,11 +2,29 @@
 # For Fertility Issues chapter in Oxford handbook
 # Claus C Portner
 # Begun.: 2017-02-10
-# Edited: 2017-02-13
+# Edited: 2017-02-15
 
 library(tidyr)
 library(ggplot2)
-library(directlabels)
+library(directlabels) # don't really need this
+
+# Variable definitions
+# SP.DYN.TFRT.IN	Fertility rate, total (births per woman)
+# SP.DYN.WFRT	    Wanted fertility rate (births per woman)
+# SP.ADO.TFRT	    Adolescent fertility rate (births per 1,000 women ages 15-19)
+# SH.DYN.MORT	    Mortality rate, under-5 (per 1,000 live births)
+# SH.DYN.MORT.FE	Mortality rate, under-5, female (per 1,000 live births)
+# SH.DYN.MORT.MA	Mortality rate, under-5, male (per 1,000 live births)
+
+# Country codes
+# Latin America & the Caribbean (IDA & IBRD countries)	TLA
+# Middle East & North Africa (IDA & IBRD countries)	TMN
+# IDA & IBRD total	IBT
+# Europe & Central Asia (IDA & IBRD countries)	TEC
+# East Asia & Pacific (IDA & IBRD countries)	TEA
+# South Asia (IDA & IBRD)	TSA
+# Sub-Saharan Africa (IDA & IBRD countries)	TSS
+
 
 # short file paths - assuming work directory is "code"
 dataDir <- "../data/Data_Extract_From_World_Development_Indicators"
@@ -37,17 +55,30 @@ df$SP.DYN.TFRT.IN <- as.numeric(df$SP.DYN.TFRT.IN)
 df$SP.DYN.WFRT <- as.numeric(df$SP.DYN.WFRT)
 
 # Graph for TFR
-# This is a pretty good start, but need legends fixed
-p <- ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, group  = Country.Code, color = Country.Code)) + 
+# This is a pretty good start; now has nice legends and a line for replacement fertility
+p <- ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, fill  = Country.Code, color = Country.Code)) + 
   geom_line(size=1.5) + # Thicker line
   scale_y_continuous(expand = c(0, 0), limits = c(0,8)) + # better way of 0 in TFR
   xlab("Year") + ylab("Total Fertility Rate") + # Pretty labels
   ggtitle("Changes in Total Fertility Rate by Region - 1967-2015") +
-  scale_colour_hue(name = "Region") + # Set legend title
+  scale_colour_discrete(name = "Regions",
+                        labels = c("Overall", "East Asia & Pacific", "Europe & Central Asia", 
+                                   "Latin America & the Caribbean", "Middle East & North Africa", 
+                                   "South Asia", "Sub-Saharan Africa" )) +
+  guides(color = guide_legend(ncol = 2)) +
   theme_bw() +
-  theme(legend.position = c(.2, .2))
+  theme(legend.position = c(.25, .15))
+  
+p + geom_hline(aes(yintercept = 2.1), linetype = "dashed", colour = "red") # pretty line for replacement fertility
 
+p
 
+ggsave(file.path(figureDir,"totalFertilityRates.pdf"), device = "pdf")
+
+stop()
+scale_colour_hue(name = "Region", ) + # Set legend title
+  
+labels = c("Overall")
 # Labels at end of lines, problem is very difficult to see
 p1 <- ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, group  = Country.Code, color = Country.Code)) + 
   geom_line(size=1.5) + # Thicker line
