@@ -3,10 +3,30 @@
 \fi
 \begin{thebibliography}{xx}
 
+\harvarditem[Bongaarts and Casterline]{Bongaarts and
+  Casterline}{2013}{Bongaarts2013a}
+{\bf Bongaarts, John and John Casterline}, ``Fertility Transition: Is
+  sub-Saharan Africa Different?,'' {\it Population and Development Review},
+  2013, {\it 38}, 153--168.
+
 \harvarditem[Dupas et al.]{Dupas, Huillery and Seban}{2017}{Dupas2017}
 {\bf Dupas, Pascaline, Elise Huillery, and Juliette Seban}, ``Risk Information,
   Risk Salience, and Adolescent Sexual Behavior: Experimental Evidence from
   Cameroon,'' CEGA Working Paper Series WPS-064, Center for Effective Global
   Action, University of California, Berkeley February 2017.
+
+\harvarditem[Gerland et al.]{Gerland, Raftery, {\v S}ev{\v c}{\'\i}kov{\'a},
+  Li, Gu, Spoorenberg, Alkema, Fosdick, Chunn, Lalic, Bay, Buettner, Heilig and
+  Wilmoth}{2014}{Gerland2014}
+{\bf Gerland, Patrick, Adrian~E. Raftery, Hana {\v S}ev{\v c}{\'\i}kov{\'a},
+  Nan Li, Danan Gu, Thomas Spoorenberg, Leontine Alkema, Bailey~K. Fosdick,
+  Jennifer Chunn, Nevena Lalic, Guiomar Bay, Thomas Buettner, Gerhard~K.
+  Heilig, and John Wilmoth}, ``World population stabilization unlikely this
+  century,'' {\it Science}, October 2014, {\it 346} (6206), 234--237.
+
+\harvarditem[Merli and Raftery]{Merli and Raftery}{2000}{merli00}
+{\bf Merli, M~Giovanna and Adrian~E Raftery}, ``{Are Births Underreported in
+  Rural China? Manipulation of Statistical Records in Response to China's
+  Population Policies},'' {\it Demography}, 2000, {\it 37} (1), 109--126.
 
 \end{thebibliography}
