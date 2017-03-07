@@ -528,7 +528,8 @@ This lack of evidence is partly the result of the challenges in measuring
 family planning program's impacts.
 First, studies of family planning programs have often covered periods of 
 rapid economic development and fertility decline, making it difficult to
-isolate the effects of family planning programs.
+isolate the effects of family planning programs from the changes in the
+economy.
 Second, existing studies have largely ignored heterogeneous impacts,
 especially whether women with different education levels respond
 differently to family planning.
@@ -537,9 +538,10 @@ women are equally efficient users of modern contraceptives, but
 better-educated women are more efficient at using ``ineffective'' 
 contraceptive methods such as withdrawal or rhythm \citep{Rosenzweig1989}.
 This suggests that the effect of family planning should be stronger the 
-lower the education levels.
+lower the education levels, but few studies address this.
 Finally, rigorous study is hampered by the challenge of non-random program 
 placement \citep{rosenzweig86,pitt93}.
+
 
 Randomizing the allocation of programs and comparing the outcomes of 
 interest between treatment and control areas could overcome the non-random 
@@ -547,13 +549,21 @@ program placement problem.
 Although theoretically superior, such experiments have several drawbacks in practice.
 First, there are concerns about the external validity of experiments, which
 are often small in scale.
-Non-compliance of randomization can further decrease
+Add to this, non-compliance of randomization can further decrease
 the power of the experiment \citep{Desai2011}.
 This is especially a problem for programs like family planning where the 
 randomization takes places at community level rather than at individual level.
 Second, because of the cumulative nature of fertility, an experiment must 
 run for a substantial period before one can assess the effect on 
 fertility.
+Short-run effects may simply reflect changes in spacing-patterns rather than
+changes in the overall number of children.
+When run for too short a period, experiments may also be prone to short-term 
+health scares, such as the one experienced by an experiment in 
+Zambia \citep{Ashraf2009}.%
+\footnote{
+The published version of this paper does not mention the scare \citep{Ashraf2014}.
+}
 
 The Matlab family planning program experiment from Bangladesh is the
 least likely to suffer from these drawbacks.
@@ -563,31 +573,22 @@ that received only the standard family planning program \citep{Phillips1988}.
 More recent work using the same villages with data until 1996 finds a decline in fertility
 of about 15 percent in the program villages compared with the control villages 
 \citep{Sinha2005,Joshi2007}.
-These results reflect, however, a level of program intervention and intensity unlikely 
-to be sustainable \citep{pritchett94a}.%
+These results reflect, however, a level of program intervention and intensity
+that some argue are unlikely to be sustainable \citep{pritchett94a}.%
 \footnote{
 Per woman reached, the program cost 35 times more than the standard government family 
 planning program and each averted birth cost USD 180 in 1987, 1.2 times GDP per capita 
 at the time.
 }
-Short-run effects may simply reflect changes in spacing-patterns rather than
-changes in the overall number of children.
-When run for too short a period, experiments may also be prone to short-term health 
-scares, such as the one experienced by an experiment in Zambia \citep{Ashraf2009}.
 
-At the same time, many non-randomized family planning programs have been in 
-place for a substantial period and it is cost-effective 
-to make optimal use of the information from these programs.
 If longitudinal data were collected in parallel with the introduction of the 
 program, program effects can be estimated using fixed effects, provided there
 are enough areas that receive a program between the (minimum) 
 two survey rounds and provided the period between the rounds is long 
-enough.%
-\footnote{
+enough.
 Examples from Indonesia of this approach found a negative (but not statistically 
 significant) effect on fertility, responsible for only 4 to 8 percent of the 
 decline in fertility from 1982 to 1987 \citep{pitt93,Gertler1994}.
-}
 Longitudinal data are, however, most often not available or cover too short 
 periods, in practice limiting researchers to using cross-sectional data.%
 \footnote{%
@@ -596,40 +597,46 @@ bias.
 For a discussion of this and other problems in the study of family planning
 see, for example, \cite{angeles98}.
 }
-In such contexts, one approach is to use variables that influence program placement 
-but are unrelated to individual fertility.
+
+If neither experiments or longitudinal data are available, one approach is to use 
+variables that influence program placement but are unrelated to individual fertility,
+what is known as the instrumental variable (IV) approach.
+This is the least appealing approach when trying to identify the causal
+impact of family planning because it relies heavily on the choice of
+variables that affect program placement without any direct test for whether
+these variables are appropriate.
+Despite these drawbacks it is often the best we can do given the constraints.
 
 Using this approach, a woman in Tanzania exposed to family planning throughout 
 her fertile lifespan is found to have 4.13 children compared with 4.71 children 
 in the absence of family planning programs \citep{angeles98}.
 For Indonesia, \cite{Angeles2005} report using the same approach, but found
-no differences between standard OLS and IV results, which was interpreted
+no differences between standard regression and IV results, which was interpreted
 as a lack of evidence of non-random placement of family planning programs.
 Lingering concerns remain, however, that some of the variables used to identify placement
 (such as child mortality levels and the presence of other family planning services)
 may also be correlated with unobservable variables that influence 
 both placement and fertility decisions.
-Also using cross-sectional information \cite{Miller2010}
-found that Columbia's family 
+Also using cross-sectional information \cite{Miller2010} found that Columbia's family 
 planning program, Profamilia, reduced lifetime fertility by around 
 half a child, equivalent to only 10 percent of the sharp decline in fertility 
 over the period the program was implemented.
-
-
+While most work find an effect of about half a child, \citet{Portner2011}
+find a substantially higher effect of access to family planning in Ethiopia.
+Access to family planning reduce completed fertility by more than 1 child among 
+women without education, whereas no effect is found among women with some formal 
+schooling, suggesting that family planning and formal education act as 
+substitutes, at least in this low income, low growth setting. 
+It also highlights the importance of examining how access to family planning
+can vary depending on the recipients' characteristics.
 
 \citet{Newman1988}
 
 \citet{Newman1984}
 
-
-[family planning]
-
 \citet{Feyisetan1996}
 
-Our Ethiopia paper
-\citet{Miller2010} Miller 2010 EJ
 \citet{Miller2016}
-Jones 2015 EDCC
 
 \citet{Desai2011}
 
@@ -639,13 +646,20 @@ Jones 2015 EDCC
 
 Schultz papers on Matlab and improvements in women's lives.
 
-Disruption in access: \citet{Dumas2017}
+A very different approach to understanding how family planning access
+affects fertility is to examine the response to disruptions in access.
+These are---by their very nature---often temporary, but they have
+the advantage here of mostly being exogenous to the individual women.
+That is, the disruption in supply of contraceptives comes as a
+surprise and is independent of the individual woman's initial
+demand for contraception.
+
+\citet{Dumas2017}
 
 Ian Salas's paper 
 
 \citet{Jones2015} on gag rule
 
-Our Ethiopia paper
 
 [China's one child policy]
 
