@@ -1,0 +1,49 @@
+Notes:
+
+[Decided to remove this from the chapter]
+
+\section{Risk and Insurance}
+
+[treat mortality in general as a shock here? \citet{olsen80}]
+
+One of the defining characteristics of developing
+countries is that risk to life and livelihood are 
+most more prevalent and less well insured against
+compared to developed countries.
+We can split the fertility response to this fact
+into two categories: how people respond to the
+shocks and how people respond to the underlying
+risk of experiencing a shock.
+This distinction is important because it is possible 
+that the responses run in opposite directions, which
+may result in no apparent response to shocks if the
+underlying risk is not controlled for, or a focus
+on treating the shock rather than the underlying
+risk if both move in the same direction.
+
+
+[shock response]
+
+\citet{Hernandez-Julian2014}
+
+Moreover, fertility rates declined by about 34 \% during 1974–1975,
+before increasing by 17 \% in the post-famine years, thereby partially
+offsetting the famine’s effect (Razzaque 1988).
+
+\citet{Burlando2014} on power outage in Zanzibar
+
+\citep{Nobles2015} on fertility response to 
+the tsunami.
+
+\citep{Alam2016}
+
+\citet{pitt98b}
+
+
+[response to the underlying risk]
+
+Gone with the wind?
+
+\citep{Lambert2016} on sons as widowhood insurance 
+
+\citep{Adsera2011}
