@@ -1,97 +1,57 @@
-\documentclass[]{article}
-\usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-\else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-\fi
-% use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
-\usepackage[unicode=true]{hyperref}
-\hypersetup{
-            pdftitle={Fertility Issues in Developing Countries},
-            pdfauthor={Claus C Pörtner Department of Economics Albers
-School of Business and Economics Seattle University, P.O.
-Box 222000 Seattle, WA 98122 cportner@seattleu.edu www.clausportner.com
-\& Center for Studies in Demography and Ecology University of
-Washington},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
-\usepackage{graphicx,grffile}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@
-width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat
-@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{0}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
+\documentclass[letterpaper,12pt]{article}
 
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
+\usepackage{mathpazo}
+\usepackage[longnamesfirst]{natbib}
+\usepackage[flushleft]{threeparttable} 
+\usepackage{booktabs}
+\usepackage{rotating} 
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage{caption} 
+\usepackage{dcolumn} 
+\usepackage{setspace}
+\usepackage[longnamesfirst]{natbib}
+\usepackage[font=scriptsize]{subfig}
+\usepackage[pdftex,colorlinks=true,linkcolor=black,citecolor=black]{hyperref} 
+\usepackage[margin=1.0in]{geometry} 
+\usepackage{multirow}
+
+\newcommand{\mco}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\mct}[1]{\multicolumn{2}{c}{#1}}
 
 
-\title{Fertility Issues in Developing Countries}
-\author{Claus C Pörtner\\
-Department of Economics\\
-Albers School of Business and Economics\\
-Seattle University, P.O.
-Box 222000\\
-Seattle, WA 98122\\
-\href{mailto:cportner@seattleu.edu}{\texttt{cportner@seattleu.edu}}\\
-\href{http://www.clausportner.com}{\texttt{www.clausportner.com}}\\
-\&\\
-Center for Studies in Demography and Ecology\\
-University of Washington\\}
+%opening
+\title{Fertility Issues in Developing Countries} 
+
+\author{Claus C P\"ortner\\
+    Department of Economics\\
+    Albers School of Business and Economics\\
+    Seattle University, P.O. Box 222000\\
+    Seattle, WA 98122\\
+    \href{mailto:cportner@seattleu.edu}{\texttt{cportner@seattleu.edu}}\\
+    \href{http://www.clausportner.com}{\texttt{www.clausportner.com}}\\
+    \& \\
+    Center for Studies in Demography and Ecology \\
+    University of Washington\\ \vspace{2cm}
+    }
+
 \date{April 2017}
 
-\begin{document}
-\maketitle
+\doublespacing
 
-\section{Introduction}\label{introduction}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+
+\newpage 
+
+\section{Introduction}
 
 Despite a common perception that fertility is very high in developing
 countries, the truth is substantially more complicated.
-Figure {[}fig:TFR{]} shows that there has been an astonishing decline in
+Figure \ref{fig:TFR} shows that there has been an astonishing decline in
 most developing countries' total fertility rate (TFR) over the last half
 century.%
 \footnote{
@@ -110,7 +70,12 @@ growing in many of these regions because there are still many more young
 people than older people and these young people either have not entered
 reproductive age or are just starting out.
 
-\includegraphics{../figures/totalFertilityRates.pdf} {[}fig:TFR{]}
+\begin{figure}[hp]
+    \centering
+    \caption{Total Fertility Rates by Region from 1967 to 2015}
+    \includegraphics[width=0.75\linewidth]{../figures/totalFertilityRates.pdf}
+    \label{fig:TFR}
+\end{figure}
 
 If fertility levels are close to identical across developing and
 developed countries and there is rapid urbanization and increasing labor
@@ -121,10 +86,14 @@ is still relevant, what the recent developments in research has been,
 and most importantly, what I consider to be the main outstanding issues.
 The chapter is organized \ldots{}
 
-\section{Sub-Saharan Africa}\label{sub-saharan-africa}
+
+
+
+
+\section{Sub-Saharan Africa}
 
 Both in terms of the degree of decline and the overall level, the
-outlier in figure 1 is Sub-Saharan Africa.
+outlier in Figure \ref{fig:TFR} is Sub-Saharan Africa.
 Sub-Saharan Africa now has an average TFR that is about twice as large
 as the other regions.
 Most of the projected future increase in world population is therefore
@@ -163,17 +132,22 @@ access to modern contreceptive---will still lower fertility in this
 approach, the resulting decline in fertility is assumed to be much
 smaller than in the first theory.
 
-\includegraphics{../figures/childMortalityRates.pdf} {[}fig:mortality{]}
+\begin{figure}[hp!]
+    \centering
+    \caption{Under-five Mortality Rates by Region from 1967 to 2015}
+    \includegraphics[width=0.75\linewidth]{../figures/childMortalityRates.pdf}
+    \label{fig:mortality}
+\end{figure}
 
 Both theories consider the surviving number of children as the main
 outcome of interest.
 One possible explanation for the slow decline in fertility could
 therefore be that mortality in Sub-Saharan Africa is higher than in the
 other regions.
-Figure {[}fig:mortality{]} shows the pattern in under-5 mortality across
+Figure \ref{fig:mortality} shows the pattern in under-five mortality across
 the same regions as above over time.
 The improvements in mortality risk over time are truly astonishing.
-Over the last half-decade under-5 mortality in developing countries has
+Over the last half-decade under-five mortality in developing countries has
 fallen from close to 175 to below 50 per 1,000 live births.
 Sub-Saharan Africa, however, lags substantially behind other regions.
 Despite a massive improvement from a situation where more than a quarter
@@ -304,7 +278,7 @@ Hence, it is unclear to what extent reported education levels reflect
 women's actual human capital.
 The result is that education does not appear to have as substantial an
 effect on fertility in Tanzania as other found elsewhere
-\citet{Alam2016}.
+\citep{Alam2016}.
 
 The final explanation for differences in TFRs across regions is the role
 of urbanization.
@@ -402,8 +376,7 @@ important in delaying marriage and first birth
 effects of interventions may disappear quickly after the end of the
 program \citep{Baird2016}.
 
-\section{Bargaining Power and Sex
-Preference}\label{bargaining-power-and-sex-preference}
+\section{Bargaining Power and Sex Preference}\label{bargaining-power-and-sex-preference}
 
 An important question is what happens when husband and wife do not agree
 on the desired number of children.
@@ -465,7 +438,7 @@ often mirrored in differences in actual achieved fertility.
 The implication is that there might not be an innate contradiction
 surrounding fertility behavior within couples \citep{Field2016}.
 
-\subsection{Sex Preference}\label{sex-preference}
+\subsection{Sex Preference}
 
 An especially important aspect of intrahousehold allocation is the
 preference for children of a specific sex.
@@ -478,7 +451,7 @@ would prefer to have more sons than daughters, and the strength of son
 preference is then measured by how many more sons than daughters a
 family wants.
 This measure of son preference is commonly used in the literature
-\citep[e.g.\]{clark00,Jensen2009,Hu2015}.
+\citep[e.g.]{clark00,Jensen2009,Hu2015}.
 Other versions are possible.
 Parents might, for example, have a preference for one son, but once that
 one son is secured they do not have strong preferences for the
@@ -564,7 +537,7 @@ and urban women are more likely to use sex selection
 These women have higher costs of children and therefore lower desired
 fertility.
 
-\section{Policies}\label{policies}
+\section{Policies}
 
 Even though most people automatically think of family planning programs
 when population policy in developing countries is mentioned, any policy
@@ -940,6 +913,9 @@ reduce fertility.%
 \footnote{
 \citet{Ainsworth1996} reviews other potential explanations.}
 
-\section{Conclusion}\label{conclusion}
+\section{Conclusion}
+
+\bibliographystyle{aer}
+\bibliography{collection}
 
 \end{document}
