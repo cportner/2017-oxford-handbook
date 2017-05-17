@@ -5,6 +5,16 @@ Structure:
 
 Edits:
 
+Sub-Saharan Africa:
+
+- The argument about fertility and farm size is theoretical. 
+There are no solid tests of the arguments, mainly because getting measuring 
+land access is very difficult at an individual level.
+I started a paper on land access and fertility in Bangladesh, but we had
+to leave it again because there are no solid data.
+I have added a new paragraph that discuss some of the issues with 
+understanding the relationship between land access and fertility.
+
 Introduction:
 
 - Added outline of chapter
