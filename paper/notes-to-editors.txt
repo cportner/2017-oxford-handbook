@@ -3,7 +3,11 @@ Notes to editors
 Structure:
 - Split Bargaining Power and Sex Preferences into two separate sections
 
-Edits:
+Larger edits:
+
+Introduction:
+
+- Added outline of chapter
 
 Sub-Saharan Africa:
 
@@ -15,9 +19,20 @@ to leave it again because there are no solid data.
 I have added a new paragraph that discuss some of the issues with 
 understanding the relationship between land access and fertility.
 
-Introduction:
+Sex Preferences:
 
-- Added outline of chapter
+- Main edit is a better explanation of the paper on prospective 
+sex preference.
+- Also added footnote with text from sex preference questions
 
+Policies:
 
-Policies
+- Added information on the health scare in Zambia
+- Matlab is only large long-running family planning experiment.
+Since the paragraph is about long-run effects there is little
+to chose between.
+- Progesa/Oportunidades does not have a family planning component
+- Added the full original name for the Matlab research center:
+the International Centre for Diarrhoeal Disease Research, Bangladesh
+and changed the text to reflect how they are now known: icddr,b 
+(it is supposed to be lower-case)
