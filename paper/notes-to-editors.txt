@@ -38,3 +38,8 @@ and changed the text to reflect how they are now known: icddr,b
 (it is supposed to be lower-case)
 - Profamilia appears to now function very much like standard
 family planning programs.
+- Expanded discussion of causality issues for the relationship
+between family planning and other outcomes than fertility.
+- Differences between Sinha 2005 and Joshi and Schultz 2007 
+is mainly sample. 
+I have updated the text to reflect that.
