@@ -5,6 +5,10 @@ Structure:
 
 Larger edits:
 
+Abstract:
+
+- Added abstract and keywords
+
 Introduction:
 
 - Added outline of chapter
@@ -43,3 +47,8 @@ between family planning and other outcomes than fertility.
 - Differences between Sinha 2005 and Joshi and Schultz 2007 
 is mainly sample. 
 I have updated the text to reflect that.
+
+Conclusion:
+
+- Added conclusion.
+
