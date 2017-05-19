@@ -36,3 +36,5 @@ to chose between.
 the International Centre for Diarrhoeal Disease Research, Bangladesh
 and changed the text to reflect how they are now known: icddr,b 
 (it is supposed to be lower-case)
+- Profamilia appears to now function very much like standard
+family planning programs.
