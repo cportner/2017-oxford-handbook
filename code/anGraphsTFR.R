@@ -2,9 +2,10 @@
 # For Fertility Issues chapter in Oxford handbook
 # Claus C Portner
 # Begun.: 2017-02-10
-# Edited: 2017-02-22
+# Edited: 2017-05-19
 
 library(tidyr)
+library(tidyverse)
 library(ggplot2)
 library(directlabels) # don't really need this
 
@@ -74,7 +75,6 @@ tfrPlot
 
 ggsave(file.path(figureDir,"totalFertilityRates.pdf"), device = "pdf")
 
-
 # Graph for mortality
 
 mortalityPlot <- ggplot(data = df, aes(x=year, y=SH.DYN.MORT, fill = Country.Code, color = Country.Code)) +
@@ -94,21 +94,68 @@ mortalityPlot
   
 ggsave(file.path(figureDir,"childMortalityRates.pdf"), device = "pdf")
 
-stop()
 
-scale_colour_hue(name = "Region", ) + # Set legend title
-  
-labels = c("Overall")
-# Labels at end of lines, problem is very difficult to see
-p1 <- ggplot(data = df, aes(x=year, y=SP.DYN.TFRT.IN, group  = Country.Code, color = Country.Code)) + 
-  geom_line(size=1.5) + # Thicker line
-  scale_y_continuous(expand = c(0, 0), limits = c(0,8)) + # better way of 0 in TFR
-  xlab("Year") + ylab("Total Fertility Rate") + # Pretty labels
-  ggtitle("Changes in Total Fertility Rate by Region - 1967-2015")
+# Black and white TFR graph
 
-p1 <- p1 + geom_dl(aes(label = Country.Code), 
-                   method = "last.points", cex = 0.8)
-  
-p1
+# Need dataframe without overall and 2015 
+bwDF <- filter(df, year != 2015 & Country.Code != "IBT")
 
+theme_set(theme_bw())
+bwTFR <- ggplot(data = bwDF,
+                aes(x = year, y = SP.DYN.TFRT.IN, 
+                    linetype = Country.Code))
+
+bwTFR <- bwTFR + geom_line(size=1.5)
+
+# bwTFR <- bwTFR +   xlab("Year") + ylab("Total Fertility Rate") + # Pretty labels
+#   ggtitle("Changes in Total Fertility Rate by Developing Region - 1967-2015")
+
+bwTFR <- bwTFR +   xlab("Year") + ylab("Total Fertility Rate") +
+  labs(caption = "Data source: World Development Indicators 2017")  # Pretty labels
+
+bwTFR <- bwTFR + scale_y_continuous(expand = c(0, 0), limits = c(0,8)) # better way of 0 in TFR
+
+bwTFR <- bwTFR +  scale_linetype_discrete(name = "Regions",
+                                        labels = c("East Asia & Pacific", "Europe & Central Asia", 
+                                                    "Latin America & the Caribbean", "Middle East & North Africa", 
+                                                    "South Asia", "Sub-Saharan Africa" ))
+
+bwTFR <- bwTFR + guides(linetype = guide_legend(ncol = 2)) + 
+  theme(legend.position = c(.28, .14), legend.key.width = unit(1.5, "cm"))
+
+bwTFR <- bwTFR + geom_hline(aes(yintercept = 2.1), linetype = "dashed") # pretty line for replacement fertility
+
+bwTFR
+
+ggsave(file.path(figureDir,"totalFertilityRatesBW.pdf"), device = "pdf")
+
+
+# Black and white mortality graph
+
+theme_set(theme_bw())
+bwMort <- ggplot(data = bwDF,
+                aes(x = year, y = SH.DYN.MORT, 
+                    linetype = Country.Code))
+
+bwMort <- bwMort + geom_line(size=1.5)
+
+# bwMort <- bwMort +   xlab("Year") + ylab("Total Fertility Rate") + # Pretty labels
+#   ggtitle("Changes in Total Fertility Rate by Developing Region - 1967-2015")
+
+bwMort <- bwMort +   xlab("Year") + ylab("Under-five Mortality Rate (per 1,000 live births)") +
+  labs(caption = "Data source: World Development Indicators 2017")  # Pretty labels
+
+bwMort <- bwMort +   scale_y_continuous(expand = c(0, 0), limits = c(0,275), breaks = c(50,100,150,200,250)) # better way of 0 
+
+bwMort <- bwMort +  scale_linetype_discrete(name = "Regions",
+                                          labels = c("East Asia & Pacific", "Europe & Central Asia", 
+                                                     "Latin America & the Caribbean", "Middle East & North Africa", 
+                                                     "South Asia", "Sub-Saharan Africa" ))
+
+bwMort <- bwMort + guides(linetype = guide_legend(ncol = 2)) + 
+  theme(legend.position = c(.73, .83), legend.key.width = unit(1.5, "cm"))
+
+bwMort
+
+ggsave(file.path(figureDir,"childMortalityRatesBW.pdf"), device = "pdf")
 

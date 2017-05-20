@@ -1,19 +1,19 @@
-Notes to editors
+# Notes to editors
 
-Structure:
+## Structure:
 - Split Bargaining Power and Sex Preferences into two separate sections
 
-Larger edits:
+## Larger edits:
 
-Abstract:
+### Abstract:
 
 - Added abstract and keywords
 
-Introduction:
+### Introduction:
 
 - Added outline of chapter
 
-Sub-Saharan Africa:
+### Sub-Saharan Africa:
 
 - The argument about fertility and farm size is theoretical. 
 There are no solid tests of the arguments, mainly because getting measuring 
@@ -23,13 +23,13 @@ to leave it again because there are no solid data.
 I have added a new paragraph that discuss some of the issues with 
 understanding the relationship between land access and fertility.
 
-Sex Preferences:
+### Sex Preferences:
 
 - Main edit is a better explanation of the paper on prospective 
 sex preference.
 - Also added footnote with text from sex preference questions
 
-Policies:
+### Policies:
 
 - Added information on the health scare in Zambia
 - Matlab is only large long-running family planning experiment.
@@ -48,7 +48,7 @@ between family planning and other outcomes than fertility.
 is mainly sample. 
 I have updated the text to reflect that.
 
-Conclusion:
+### Conclusion:
 
 - Added conclusion.
 
