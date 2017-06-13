@@ -1,0 +1,20 @@
+# Notes to editors for version 2
+
+## Introduction
+
+- The graph only includes developing countries as per the World Bank definition.
+- UN uses 2.1 for replacement-level fertility across all countries, so I am
+sticking with 2.1.
+
+## Sub-Saharan Africa
+
+- [TK example of differences across Sub-Saharan Africa as footnote]
+- Added paragraph with two studies on the effects of land security to
+the end of the land discussion.
+- There is, indeed, a very large literature on the positive relationship between
+mother's education and child health. 
+Only three of them try to understand exactly why it is.
+All three suggest that health knowledge is the main driver rather than some of
+the other positive effects of education (higher income to name one).
+I have split the sentence and expanded the discussion in the footnote.
+- 
