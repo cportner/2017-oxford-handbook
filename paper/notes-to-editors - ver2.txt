@@ -37,3 +37,32 @@ in fertility in urban areas of Ethiopia.
 that show the same results but uses a different method.
 - Added newer reference on son preference. 
 Part of the problem is that the lastest version of NFHS is 2005-2006.
+
+## Policies
+
+- I have completely recast the discussion of issues with family planning
+experiments. 
+I hope it is clearer now.
+- icddr,b is how the organization refer to itself (http://www.icddrb.org
+and more detail on http://www.icddrb.org/about-us/history).
+- I have updated the footnote on the gag rule to include the
+expanded version of the the Trump administration.
+- One child policy and fertility: I have added the suggested Ebenstein
+reference and a footnote on sex selection.
+- Matlab and education: Women's education were not affected by the program.
+What I meant was that the effect of the program depended on the level of
+the recipient's education.
+I have rewritten the end of that paragraph.
+- Higher female education is still the most discussed policy for 
+reducing fertility and the Schultz reference makes this argument
+very nicely.
+- I have split the paragraph on education and perception about
+returns to education into two and substantially expanded the
+discussion of Jensen 2012.
+- I have edited the discussion of why maternal education and
+child health are positively correlated.
+
+## Conclusion
+
+- See discussion of replacement level above. 
+The plural "s" was because I used "countries".
