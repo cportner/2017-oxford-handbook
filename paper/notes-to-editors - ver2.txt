@@ -17,4 +17,7 @@ Only three of them try to understand exactly why it is.
 All three suggest that health knowledge is the main driver rather than some of
 the other positive effects of education (higher income to name one).
 I have split the sentence and expanded the discussion in the footnote.
-- 
+- I have also rewritten the paragraph introducing the effects of education
+to highlight that most of the literature is on the association.
+I added a sentence on the newer literature trying to estimate causal
+relationships.
