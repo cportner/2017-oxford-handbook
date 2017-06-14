@@ -31,3 +31,9 @@ in fertility in urban areas of Ethiopia.
 
 - Added more discussion of West Africa and additional references.
 
+## Sex Preferences
+
+- On Underreporting: I have added a more recent paper by Goodkind 2011
+that show the same results but uses a different method.
+- Added newer reference on son preference. 
+Part of the problem is that the lastest version of NFHS is 2005-2006.
