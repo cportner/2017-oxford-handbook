@@ -21,3 +21,13 @@ I have split the sentence and expanded the discussion in the footnote.
 to highlight that most of the literature is on the association.
 I added a sentence on the newer literature trying to estimate causal
 relationships.
+- I cannot find any papers reproducing the Ainsworth, Beegle, and Nyamete 
+paper, but I do not see any evidence that the pattern is fundamentally
+changed.
+If anything, the difference is likely stronger given the strong decline
+in fertility in urban areas of Ethiopia.
+
+## Bargaining Power
+
+- Added more discussion of West Africa and additional references.
+
