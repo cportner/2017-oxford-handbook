@@ -3,6 +3,8 @@
 ### The reason for the weird set-up is to have MakeFile 
 ### in base directory and run LaTeX in the paper directory 
 ### without leaving all the other files in the base directory
+### Pandoc has some issues, so the Word file produced is not immediately
+### readable. Open the file with Word and let it fix the file.
 
 TEXFILE = fertilityIssues-Ver2
 TEX  = ./paper
@@ -13,7 +15,7 @@ DAT  = ./data
 ### LaTeX part
 
 # need to add a bib file dependency to end of next line
-$(TEX)/$(TEXFILE).pdf: $(TEX)/$(TEXFILE).tex $(FIG)/totalFertilityRatesBW.pdf $(FIG)/childMortalityRatesBW.pdf
+$(TEX)/$(TEXFILE).pdf: $(TEX)/$(TEXFILE).tex $(FIG)/totalFertilityRatesBW.pdf $(FIG)/childMortalityRatesBW.pdf $(TEX)/oxford-references.bib
 	cd $(TEX); xelatex $(TEXFILE)
 	cd $(TEX); bibtex $(TEXFILE)
 	cd $(TEX); xelatex $(TEXFILE)
@@ -22,7 +24,10 @@ $(TEX)/$(TEXFILE).pdf: $(TEX)/$(TEXFILE).tex $(FIG)/totalFertilityRatesBW.pdf $(
 .PHONY: view
 view: $(TEX)/$(TEXFILE).pdf
 	open -a Skim $(TEX)/$(TEXFILE).pdf & 
-
+	
+.PHONY: word
+word: 
+	cd $(TEX); pandoc $(TEXFILE).tex --bibliography=oxford-references.bib -S -o $(TEXFILE).docx
 
 ### R part         			                                ###
 $(FIG)//totalFertilityRatesBW.pdf: $(COD)/anGraphsTFR.R $(DAT)/Data_Extract_From_World_Development_Indicators/2017-02-09-wdi-extract.csv
