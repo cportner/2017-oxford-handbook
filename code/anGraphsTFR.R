@@ -126,6 +126,7 @@ bwTFR <- bwTFR + geom_hline(aes(yintercept = 2.1), linetype = "dashed") # pretty
 bwTFR
 
 ggsave(file.path(figureDir,"totalFertilityRatesBW.pdf"), device = "pdf")
+ggsave(file.path(figureDir,"Portner-Fig 1.png"), device = "png")
 
 
 # Black and white mortality graph
@@ -156,4 +157,5 @@ bwMort <- bwMort + guides(linetype = guide_legend(ncol = 2)) +
 bwMort
 
 ggsave(file.path(figureDir,"childMortalityRatesBW.pdf"), device = "pdf")
+ggsave(file.path(figureDir,"Portner-Fig 2.png"), device = "png")
 

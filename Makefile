@@ -43,7 +43,7 @@ $(FIG)/childMortalityRatesBW.pdf:: $(COD)/anGraphsTFR.R $(DAT)/Data_Extract_From
 cleanall: cleanfig cleantex cleancode
 	
 cleanfig:
-	cd $(FIG); rm *.eps; rm *.pdf
+	cd $(FIG); rm *.eps; rm *.pdf rm; *.png
 	
 cleantex:
 	cd $(TEX); rm *.aux; rm *.bbl; rm *.blg; rm *.log; rm *.out; rm *.pdf; rm *.gz
