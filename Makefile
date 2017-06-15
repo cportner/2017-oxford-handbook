@@ -30,7 +30,7 @@ word:
 	cd $(TEX); pandoc $(TEXFILE).tex --bibliography=oxford-references.bib -S -o $(TEXFILE).docx
 
 ### R part         			                                ###
-$(FIG)//totalFertilityRatesBW.pdf: $(COD)/anGraphsTFR.R $(DAT)/Data_Extract_From_World_Development_Indicators/2017-02-09-wdi-extract.csv
+$(FIG)/totalFertilityRatesBW.pdf: $(COD)/anGraphsTFR.R $(DAT)/Data_Extract_From_World_Development_Indicators/2017-02-09-wdi-extract.csv
 	cd $(COD); RScript anGraphsTFR.R
 
 $(FIG)/childMortalityRatesBW.pdf:: $(COD)/anGraphsTFR.R $(DAT)/Data_Extract_From_World_Development_Indicators/2017-02-09-wdi-extract.csv

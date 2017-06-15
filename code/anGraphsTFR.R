@@ -4,10 +4,8 @@
 # Begun.: 2017-02-10
 # Edited: 2017-05-19
 
-library(tidyr)
 library(tidyverse)
 library(ggplot2)
-library(directlabels) # don't really need this
 
 # Variable definitions
 # SP.DYN.TFRT.IN	Fertility rate, total (births per woman)
@@ -121,7 +119,7 @@ bwTFR <- bwTFR +  scale_linetype_discrete(name = "Regions",
                                                     "South Asia", "Sub-Saharan Africa" ))
 
 bwTFR <- bwTFR + guides(linetype = guide_legend(ncol = 2)) + 
-  theme(legend.position = c(.28, .14), legend.key.width = unit(1.5, "cm"))
+  theme(legend.position = c(.38, .1), legend.key.width = unit(1.5, "cm"))
 
 bwTFR <- bwTFR + geom_hline(aes(yintercept = 2.1), linetype = "dashed") # pretty line for replacement fertility
 
@@ -153,7 +151,7 @@ bwMort <- bwMort +  scale_linetype_discrete(name = "Regions",
                                                      "South Asia", "Sub-Saharan Africa" ))
 
 bwMort <- bwMort + guides(linetype = guide_legend(ncol = 2)) + 
-  theme(legend.position = c(.73, .83), legend.key.width = unit(1.5, "cm"))
+  theme(legend.position = c(.6, .9), legend.key.width = unit(1.5, "cm"))
 
 bwMort
 
