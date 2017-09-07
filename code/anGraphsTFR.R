@@ -127,6 +127,8 @@ bwTFR
 
 ggsave(file.path(figureDir,"totalFertilityRatesBW.pdf"), device = "pdf")
 ggsave(file.path(figureDir,"Portner-Fig 1.png"), device = "png")
+ggsave(file.path(figureDir,"Portner-Fig 1.eps"), device = "eps")
+
 
 
 # Black and white mortality graph
@@ -158,4 +160,4 @@ bwMort
 
 ggsave(file.path(figureDir,"childMortalityRatesBW.pdf"), device = "pdf")
 ggsave(file.path(figureDir,"Portner-Fig 2.png"), device = "png")
-
+ggsave(file.path(figureDir,"Portner-Fig 2.eps"), device = "eps")

@@ -6,7 +6,7 @@
 ### Pandoc has some issues, so the Word file produced is not immediately
 ### readable. Open the file with Word and let it fix the file.
 
-TEXFILE = fertilityIssues-ver3
+TEXFILE = fertilityIssues-ver4
 TEX  = ./paper
 FIG  = ./figures
 COD  = ./code
